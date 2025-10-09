@@ -2,6 +2,7 @@ import * as express from "express";
 import * as useragent from "express-useragent";
 import * as cors from "cors";
 import { corsMiddleware } from "./middlewares/corsMiddleware";
+
 const app = express();
 
 app.use(express.json());
