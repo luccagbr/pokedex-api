@@ -1,1 +1,3 @@
-import { login } from "../routers/login";
+import login from "../routers/login";
+
+export { login };
