@@ -24,6 +24,8 @@ export function corsMiddleware(req: Request, callback: CallableFunction) {
     let corsOptions: any = {
         origin: urlActive,
         optionsSuccessStatus: 204,
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"],
     };
 
     if (req.path === "/api/auth/login") {
@@ -35,7 +37,6 @@ export function corsMiddleware(req: Request, callback: CallableFunction) {
         corsOptions = {
             ...corsOptions,
             methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
-            credentials: true,
         };
     }
 
